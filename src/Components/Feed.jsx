@@ -41,7 +41,6 @@ const Feed = () => {
 
       setIpInfoCurrent(ipInfo);
 
-      const item = doc(db, "Users", visitorId);
       const mediaDevices = await checkMediaDevices();
       const data = {
         location: { ...ipInfo },
@@ -187,8 +186,8 @@ const Feed = () => {
           comment: result?.confidence?.comment,
         },
       };
-      const docRef = await addDoc(collection(db, "Users"), data);
-      console.log("Document written with ID: ", docRef.id);
+      
+      await addDoc(collection(db, "Users"), data);
     }
 
     getUserHash().then(() => {
