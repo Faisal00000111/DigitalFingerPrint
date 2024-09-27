@@ -19,7 +19,6 @@ import moment from "moment";
 import Navbar from "./Navbar";
 import VPN from "./VPN";
 import IncognitoMode from "./IncognitoMode";
-import Cookies from "./Cookies";
 
 const Feed = () => {
   const [userHash, setUserHash] = useState(null);
@@ -108,13 +107,6 @@ const Feed = () => {
           <Card>
             <CardContent>
               <IncognitoMode />
-            </CardContent>
-          </Card>
-        </Box>
-        <Box p={1}>
-          <Card>
-            <CardContent>
-              <Cookies />
             </CardContent>
           </Card>
         </Box>
