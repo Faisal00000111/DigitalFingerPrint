@@ -10,8 +10,6 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import Mail from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import React, { useState } from "react";
 
 const StyledToolbar = styled(Toolbar)({
@@ -46,18 +44,6 @@ const Navbar = (props) => {
           FP ID: {props.fpId}
         </Typography>
         <SecurityOutlinedIcon sx={{ display: { xs: "block", sm: "none" } }} />
-        <Icons>
-          <Badge badgeContent={4} color="error">
-            <Mail />
-          </Badge>
-          <Badge badgeContent={2} color="error">
-            <NotificationsIcon />
-          </Badge>
-          <Avatar
-            sx={{ width: 30, height: 30 }}
-            onClick={(e) => setOpen(true)}
-          />
-        </Icons>
         <UserBox onClick={(e) => setOpen(true)}>
           <Avatar sx={{ width: 30, height: 30 }} />
           <Typography variant="span">Faisal</Typography>
